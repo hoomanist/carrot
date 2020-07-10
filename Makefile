@@ -7,5 +7,6 @@ all:
 	$(CC) $(CFLAGS) cd.c -o ./bin/cd
 	$(CC) $(CFLAGS) pwd.c -o ./bin/pwd
 	$(CC) $(CFLAGS) cat.c -o ./bin/cat
+	$(CC) $(CFLAGS) mkdir.c -o ./bin/mkdir
 clean:
 	rm -rf bin
