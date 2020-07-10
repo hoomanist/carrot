@@ -12,9 +12,9 @@ unix "ls" implemention in c
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
-#define MAX_DIR 500 
+#include <limits.h>
 
-void list(char dirc[MAX_DIR])
+void list(char dirc[PATH_MAX])
 {
 
 	
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
    		return 0;
 	}
 	
-	char directory[MAX_DIR];
+	char directory[PATH_MAX];
 	strcpy(directory, argv[1]);
 	list(directory);
 }
