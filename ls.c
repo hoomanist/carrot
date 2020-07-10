@@ -58,7 +58,5 @@ int main(int argc, char **argv)
    		return 0;
 	}
 	
-	char directory[PATH_MAX];
-	strcpy(directory, argv[1]);
-	list(directory);
+	list(argv[1]);
 }
