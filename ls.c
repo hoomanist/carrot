@@ -13,6 +13,8 @@ unix "ls" implemention in c
 #include <stdlib.h>
 #include <dirent.h>
 #include <limits.h>
+#include <unistd.h>
+
 
 void list(char dirc[PATH_MAX])
 {
@@ -32,11 +34,24 @@ void list(char dirc[PATH_MAX])
 
 }
 
+void current_directory(void)
+{
+	char cwd[PATH_MAX];
+ 	if (getcwd(cwd, sizeof(cwd)) != NULL) {
+   		list(cwd);
+	} else {
+       		perror("getcwd() error");
+   	}
+}
+
+
+
 int main(int argc, char **argv)
 {
 	if(argc == 1){
-		printf("this part is not implemented yet \n");
+		current_directory();
 		return 0;
+
 	}
 	else if( argc > 2 ) {
       		printf("Too many arguments supplied.\n");
