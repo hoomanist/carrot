@@ -9,5 +9,6 @@ all:
 	$(CC) $(CFLAGS) cat.c -o ./bin/cat
 	$(CC) $(CFLAGS) mkdir.c -o ./bin/mkdir
 	$(CC) $(CFLAGS) yes.c -o ./bin/yes
+	$(CC) $(CFLAGS) rm.c -o ./bin/rm
 clean:
 	rm -rf bin
