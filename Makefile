@@ -8,5 +8,6 @@ all:
 	$(CC) $(CFLAGS) pwd.c -o ./bin/pwd
 	$(CC) $(CFLAGS) cat.c -o ./bin/cat
 	$(CC) $(CFLAGS) mkdir.c -o ./bin/mkdir
+	$(CC) $(CFLAGS) yes.c -o ./bin/yes
 clean:
 	rm -rf bin
