@@ -11,6 +11,6 @@ all:
 	$(CC) $(CFLAGS) yes.c -o ./bin/yes
 	$(CC) $(CFLAGS) rm.c -o ./bin/rm
 	$(CC) $(CFLAGS) cp.c -o ./bin/cp
-
+	$(CC) $(CFLAGS) mv.c -o ./bin/mv
 clean:
 	rm -rf bin
