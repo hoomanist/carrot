@@ -10,5 +10,7 @@ all:
 	$(CC) $(CFLAGS) mkdir.c -o ./bin/mkdir
 	$(CC) $(CFLAGS) yes.c -o ./bin/yes
 	$(CC) $(CFLAGS) rm.c -o ./bin/rm
+	$(CC) $(CFLAGS) cp.c -o ./bin/cp
+
 clean:
 	rm -rf bin
