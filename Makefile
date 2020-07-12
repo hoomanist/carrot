@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-static
+CFLAGS=
 
 all:
 	mkdir bin
@@ -12,5 +12,6 @@ all:
 	$(CC) $(CFLAGS) rm.c -o ./bin/rm
 	$(CC) $(CFLAGS) cp.c -o ./bin/cp
 	$(CC) $(CFLAGS) mv.c -o ./bin/mv
+	$(CC) $(CFLAGS) touch.c -o ./bin/touch
 clean:
 	rm -rf bin
