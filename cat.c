@@ -10,7 +10,6 @@ unix "cat" simple version
 
 void show(char path[PATH_MAX])
 {
-	printf("%s\n", path);
 	int c;
 	FILE *fp;
 	fp = fopen(path, "r");
