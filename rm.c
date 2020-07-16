@@ -1,27 +1,17 @@
 #include <stdio.h>
 
-
 int 
 main(int argc, char **argv)
 {
-	if(argc > 2)
+	if(argc <= 1)
 	{
-		printf("wtf you want of me :/ \n");
-		return 0;
+		fprintf(stderr, "usage : %s filename[s]...\n", argv[0]);
+		return 1;
 	}
-	else if(argc == 1)
-	{
-		printf("input a thing :/ \n");
-		return 0;
-	}
-	int delete = remove(argv[1]);
-	if(!delete)
-		printf("ok that is removed \n");
-	else
-		printf("sorry a problem is here :) \n");
-	return 0;
 	
-
-
-
+	for(int i = 1; i < argc; i++)
+		if(remove(argv[i]) == -1)
+			fprintf(stderr, "oops something went wrong.");
+	return 0;
 }
+
